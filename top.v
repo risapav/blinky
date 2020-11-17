@@ -20,8 +20,9 @@ module top
 
 	// user interface
 	button,
-	led
-	// spi interface
+	led,
+	sig,
+	uA,uB
 
 	
 // {ALTERA_ARGS_END} DO NOT REMOVE THIS LINE!
@@ -33,6 +34,8 @@ input			sys_clk;
 
 input		[0:2]	button;
 output	[0:3]	led;
+output	[0:11] sig;
+input 	[1:15] uA,uB;
 
 	
 // {ALTERA_IO_END} DO NOT REMOVE THIS LINE!
@@ -52,7 +55,7 @@ output	[0:3]	led;
 	
 
 	Divider	#( 
-		.DIVISOR(50000000) 
+		.DIVISOR(5000000) 
 	) 
 	blinky(
 		.sig_in(sys_clk),
