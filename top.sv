@@ -71,21 +71,25 @@ input 	[1:15] uA,uB;
 //		tmp <= tmp + 12'd1;
 //	end
 	
-	parameter LEFT_RIGHT = 1'b0;
-	parameter SI = 1;
 	
 	//	simple shifter
-	always_ff @(negedge blik) begin
-		if(reset)begin
-			tmp = 1;
-			end 
-		else begin
-			tmp <= {tmp[10:0],tmp[11]};
-			end
+//	always_ff @(negedge blik) begin
+//		if(reset)begin
+//			tmp = 1;
+//			end 
+//		else begin
+//			tmp <= {tmp[10:0],tmp[11]};
+//			end
+//
+//	end
 
+	always_comb begin
+		tmp = {uA[2:7],uA[9:14]};
 	end
 	
-	assign sig = ~tmp;
+	
+//	assign sig = ~tmp;
+	assign sig = tmp;
 	//end of test clock
 
 // {ALTERA_MODULE_END} DO NOT REMOVE THIS LINE!
