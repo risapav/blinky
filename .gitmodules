@@ -1,7 +1,9 @@
 [submodule "ac608"]
 	path = ac608
-	url = https://github.com/risapav/ac608
+	url = https://github.com/risapav/ac608.git
+	branch = stable
 	
 [submodule "library"]
 	path = library
-	url = https://github.com/risapav/fpga_lib
+	url = https://github.com/risapav/fpga_lib.git
+	branch = stable
