@@ -3,7 +3,7 @@
 	url = https://github.com/risapav/ac608.git
 	branch = stable
 	
-[submodule "library"]
+[submodule "fpga_lib"]
 	path = library
 	url = https://github.com/risapav/fpga_lib.git
 	branch = stable
